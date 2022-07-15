@@ -1,19 +1,13 @@
 import json
 
-def url_list_generator():
+def url_list_generator(file):
 
     url_list = []
 
-    table_options = []
+    settings = json.load(file)
+    url_base = settings['source']
 
-    with open('ParserSettings.json') as file:
-        settings = json.load(file)
-        url_base = settings['source']
+    for i in settings['competitions']:
+        url_list.append(url_base + str(i))
 
-        for i in settings['competitions']:
-            url_list.append(url_base + str(i))
-
-        for i in settings['tableOptions']:
-            table_options.append(i)
-
-    return url_list, table_options
+    return url_list

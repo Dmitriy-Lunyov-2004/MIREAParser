@@ -1,0 +1,12 @@
+{
+    "tableOptions": [
+        "fio",
+        "accepted",
+        "original",
+        "campus",
+        "marks",
+        "achievments",
+        "sum",
+        "status"
+    ]
+}

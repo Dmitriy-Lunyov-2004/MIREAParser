@@ -16,6 +16,7 @@ def getHTMLtable(text, tableOptions):
         for t in tableOptions:
             cell = r.find('td', class_ = t)
             data[t] = cell.string
+
         database.append(data)
 
     return database
